@@ -1,5 +1,9 @@
-Allo Mathieu
 <%= form_for @member do |f| %>
   <%= f.label :name %>
-  <%= f.input :hmae %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <br/>
+  <%= f.submit "Register!!!" %>
 <% end %>
