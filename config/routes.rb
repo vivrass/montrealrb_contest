@@ -1,5 +1,6 @@
 MontrealrbContest::Application.routes.draw do
   resources :members
+  match "special" => "home#special"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
