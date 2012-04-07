@@ -1,4 +1,6 @@
 MontrealrbContest::Application.routes.draw do
+  resources :prizes
+
   resources :members
   match "special" => "home#special"
 
