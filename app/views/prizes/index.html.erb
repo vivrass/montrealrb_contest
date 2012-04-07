@@ -2,24 +2,18 @@
 
 <table>
   <tr>
+    <th></th>
     <th>Name</th>
-    <th>Image</th>
     <th>Description</th>
-    <th>Number</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Available</th>
   </tr>
 
 <% @prizes.each do |prize| %>
   <tr>
+    <td><%= image_tag image_url(prize.image.id) if prize.image %></td>
     <td><%= prize.name %></td>
-    <td><%= prize.image %></td>
     <td><%= prize.description %></td>
     <td><%= prize.number %></td>
-    <td><%= link_to 'Show', prize %></td>
-    <td><%= link_to 'Edit', edit_prize_path(prize) %></td>
-    <td><%= link_to 'Destroy', prize, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
