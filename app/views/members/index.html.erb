@@ -2,20 +2,14 @@
 
 <table>
   <tr>
+    <th></th>
     <th>Name</th>
-    <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @members.each do |member| %>
   <tr>
+    <td><%= image_tag member.gravatar_image %></td>
     <td><%= member.name %></td>
-    <td><%= member.email %></td>
-    <td><%= link_to 'Show', member %></td>
-    <td><%= link_to 'Edit', edit_member_path(member) %></td>
-    <td><%= link_to 'Destroy', member, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
