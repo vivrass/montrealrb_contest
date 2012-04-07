@@ -7,6 +7,8 @@ gem 'pg'
 gem 'heroku'
 gem 'taps'
 
+gem 'jquery-rails'
+
 group :production, :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -17,5 +19,3 @@ group :production, :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
