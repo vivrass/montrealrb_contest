@@ -2,7 +2,8 @@ h1 Listing prizes
 
 - @prizes.each do |prize|
   .prize
-    = image_tag image_url(prize.image.id) if prize.image
+    .image
+      = image_tag image_url(prize.image.id) if prize.image
     .title
       span.name= prize.name
       span.available= " (#{prize.number} available)"

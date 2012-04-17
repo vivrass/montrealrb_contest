@@ -2,7 +2,9 @@
 
 <% @prizes.each do |prize| %>
   <div class="prize">
-    <%= image_tag image_url(prize.image.id) if prize.image %>
+    <div class="image">
+      <%= image_tag image_url(prize.image.id) if prize.image %>
+    </div>
     <div class="title">
       <span class="name"><%= prize.name %></span>
       <span class="available">(<%= prize.number %> available)</span>
