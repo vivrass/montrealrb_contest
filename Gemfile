@@ -18,8 +18,6 @@ gem 'stache'
 gem 'devise'
 gem 'subdomain-fu', :git => "git://github.com/mbleigh/subdomain-fu.git"
 
-gem 'ruby-debug19'
-
 group :production, :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
