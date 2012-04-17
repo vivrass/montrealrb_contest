@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Montreal.rb Contest</title>
+    <title>Montreal.rb Contest (erb)</title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -37,10 +37,9 @@
           <a class="brand" href="<%= root_path %>">Montreal.rb</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Contestants", members_path  %></li>
-              <li><%= link_to "Prizes", prizes_path  %></li>
-              <li><%= link_to "Special", special_path, :class => "big", :id => "X" %></li>
-              <li><%= link_to "News", news_path %></li>
+              <li class="<%= "current" if @template_handler == :erb %>"><%= link_to "Erb",  url_for(:subdomain => "erb",  :only_path => false) %></li>
+              <li class="<%= "current" if @template_handler == :haml %>"><%= link_to "Haml", url_for(:subdomain => "haml", :only_path => false) %></li>
+              <li class="<%= "current" if @template_handler == :slim %>"><%= link_to "Slim", url_for(:subdomain => "slim", :only_path => false), :class => "big", :id => "X" %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
