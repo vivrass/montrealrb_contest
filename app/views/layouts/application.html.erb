@@ -34,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Montreal.rb</a>
+          <a class="brand" href="<%= root_path %>">Montreal.rb</a>
           <div class="container nav-collapse">
             <ul class="nav">
               <li><%= link_to "Contestants", members_path  %></li>
@@ -73,7 +73,9 @@
       </div><!--/content-->
 
       <footer>
-        <p>&copy;Montreal.rb 2012</p>
+        <div class="span9">
+          <p>&copy;Montreal.rb 2012</p>
+        </div>
       </footer>
 
     </div> <!-- /container -->

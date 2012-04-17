@@ -1,11 +1,14 @@
-<h1>Register to win a prize on April 17th at Montreal.rb</h1>
+<h1>Montreal.rb April 17th</h1>
 
-<%= form_for @member do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="register">
+  <h3>Register to win a prize</h3>
+  <%= form_for @member do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <br/>
-  <%= f.submit "Register!!!" %>
-<% end %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <br/>
+    <%= f.submit "Register!!!", class: "submit" %>
+  <% end %>
+</div>
