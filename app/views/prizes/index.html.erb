@@ -1,25 +1,19 @@
 <h1>Listing prizes</h1>
 
-<table>
-  <tr>
-    <th></th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Available</th>
-  </tr>
-
 <% @prizes.each do |prize| %>
-  <tr>
-    <td><%= image_tag image_url(prize.image.id) if prize.image %></td>
-    <td><%= prize.name %></td>
-    <td><%= prize.description %></td>
-    <td><%= prize.number %></td>
-  </tr>
+  <div class="prize">
+    <%= image_tag image_url(prize.image.id) if prize.image %>
+    <div class="title">
+      <span class="name"><%= prize.name %></span>
+      <span class="available">(<%= prize.number %> available)</span>
+    </div>
+    <div class="description">
+      <%= prize.description %>
+    </div>
+  </div>
 <% end %>
-</table>
-
-<br />
 
 <% if user_signed_in? %>
+  <br />
   <%= link_to 'New Prize', new_prize_path %>
 <% end %>

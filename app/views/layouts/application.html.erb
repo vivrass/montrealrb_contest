@@ -51,7 +51,9 @@
       <div class="content">
         <div class="row">
           <div class="span9">
-            <%= yield %>
+            <div id="<%= controller_name %>">
+              <%= yield %>
+            </div>
           </div>
           <div class="span1">&nbsp;</div>
             <div class="span3">
