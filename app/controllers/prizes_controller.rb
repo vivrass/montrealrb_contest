@@ -1,4 +1,6 @@
 class PrizesController < ApplicationController
+  before_filter :authenticate_user!, :except => :index
+
   # GET /prizes
   # GET /prizes.json
   def index
