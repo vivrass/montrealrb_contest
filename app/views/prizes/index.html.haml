@@ -1,0 +1,14 @@
+%h1 Listing prizes
+
+- @prizes.each do |prize|
+  .prize
+    = image_tag image_url(prize.image.id) if prize.image
+    .title
+      %span.name= prize.name
+      %span.available= "(#{prize.number} available)"
+    .description
+      = prize.description
+
+- if user_signed_in?
+  %br
+  = link_to 'New Prize', new_prize_path
