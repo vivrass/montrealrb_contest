@@ -1,0 +1,12 @@
+%h1 Montreal.rb April 17th
+
+.register
+  %h3 Register to win a prize
+  = form_for @member do |f|
+    = f.label :name
+    = f.text_field :name
+
+    = f.label :email
+    = f.email_field :email
+    %br
+    = f.submit "Register!!!", class: "submit"
