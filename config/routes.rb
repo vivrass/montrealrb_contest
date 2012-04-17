@@ -1,5 +1,5 @@
 MontrealrbContest::Application.routes.draw do
-  devise_for :users, :only => [:sessions], :sign_out_via => [:delete, :get]
+  devise_for :users, :sign_out_via => [:delete, :get]
 
   resources :prizes, :only => [:index]
   resources :members, :only => [:index, :new, :create]
