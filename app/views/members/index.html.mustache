@@ -1,0 +1,15 @@
+<h1>Listing members</h1>
+
+<table>
+  {{#mustache_members}}
+    <tr>
+      <td>{{{image_tag}}}</td>
+      <td>{{name}}</td>
+    </tr>
+  {{/mustache_members}}
+</table>
+
+<br />
+{{#links}}
+  {{{to_s}}}
+{{/links}}

@@ -12,7 +12,8 @@ gem 'jquery-rails'
 # Template engines
 gem 'haml'
 gem 'slim-rails'
-gem 'mustache_rails3'
+gem 'mustache'
+gem 'stache'
 
 gem 'devise'
 gem 'subdomain-fu', :git => "git://github.com/mbleigh/subdomain-fu.git"

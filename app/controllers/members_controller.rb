@@ -4,6 +4,15 @@ class MembersController < ApplicationController
   def index
     @members = Member.all
 
+    @mustache_members = []
+    @members.each do |member|
+      mustache_member = {}
+      mustache_member[:name] = member.name
+      mustache_member[:image_tag] = view_context.image_tag member.gravatar_image
+      @mustache_members << mustache_member
+    end
+    @links = view_context.link_to 'Register', new_member_path
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @members }

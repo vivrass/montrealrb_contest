@@ -1,0 +1,13 @@
+<h1>Listing members</h1>
+
+<table>
+  {{#members}}
+    <tr>
+      <td><%= image_tag member.gravatar_image %></td>
+      <td>{{name}}</td>
+    </tr>
+  {{/members}}
+</table>
+
+<br />
+<%= link_to 'Register', new_member_path %>

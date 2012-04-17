@@ -1,0 +1,10 @@
+%h1 Listing members
+
+%table
+  - @members.each do |member|
+    %tr
+      %td= image_tag member.gravatar_image
+      %td= member.name
+
+%br
+= link_to 'Register', new_member_path
