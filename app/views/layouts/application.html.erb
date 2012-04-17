@@ -37,9 +37,10 @@
           <a class="brand" href="#">Montreal.rb</a>
           <div class="container nav-collapse">
             <ul class="nav">
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Link2", "/path2"  %></li>
-                <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Contestants", members_path  %></li>
+              <li><%= link_to "Prizes", prizes_path  %></li>
+              <li><%= link_to "Special", special_path, :class => "big", :id => "X" %></li>
+              <li><%= link_to "News", news_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
