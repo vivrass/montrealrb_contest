@@ -9,6 +9,8 @@ gem 'taps'
 
 gem 'jquery-rails'
 
+gem 'devise'
+
 group :production, :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
